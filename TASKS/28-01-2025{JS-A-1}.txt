@@ -1,0 +1,9 @@
+1. Write a function to find whether a given number is prime or not using callback function.
+2. Print all the array elements using callback function.
+3. Write a function to find the number of prime numbers in an array of numbers using callback function.
+4. Write a function to find the sum of palindrome numbers in an array of numbers using callback function.
+5. Write a funciton to calculate the cube of a number using callback function. [first find the quare and then find the cube].
+6. Write a function to find the largest number from an array of numbers using callback function.
+7. Print all the armstrong numbers in an array of numbers using callback function.
+8. Write a function to find the sum of all the numbers in an array using callback function.
+9. Write a function to print all the even numbers in an array of numbers using callback function.
