@@ -9,11 +9,11 @@ function isPrime(number, callback){
         return callback(false)
     }
     for (let i = 2; i <= number / 2; i++){
-        if (number % i) {
-            return callback(true)
+        if (number % i == 0) {
+            return callback(false)
         }
     }
-    return callback(false)
+    return callback(true)
 }
 
 // 7 / 2 = 3.5
