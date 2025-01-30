@@ -4,7 +4,8 @@ const num = 7
 
 // 2 factors
 
-function isPrime(number, callback){
+function isPrime(number, callback) {
+    
     if (number <= 1) {
         return callback(false)
     }
@@ -20,4 +21,6 @@ function handle(value) {
     console.log(value)
 }
 
-isPrime(7, handle)
+const number = prompt("Enter a number: ")
+
+isPrime(number, handle)
