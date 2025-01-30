@@ -16,14 +16,8 @@ function isPrime(number, callback){
     return callback(true)
 }
 
-// 7 / 2 = 3.5
-// 7 / 3 =
-
-const a = 10
-const b = a
-
 function handle(value) {
-    console.log(value);
+    console.log(value)
 }
 
 isPrime(7, handle)
