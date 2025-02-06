@@ -10,23 +10,62 @@
 // this => Reference to current object, global object
 
 class Vehicle{
-
-    #name;
     
     constructor(name) {
-        this.#name = name
+        this.name = name
     }
 
     display() {
-        console.log(this.#name);
+        console.log(this.name);
     }
+
+
 }
 
 const v = new Vehicle("Bike") 
 
-v.name = "Hello"
+// v.display()
 
-v.display()
+// 4 pillers of oops
 
+// 1. Encapsulation => Hiding of data / binding of data into a single unit
+// access modifiers => public, private
+// 2. Abstraction => Hiding of implementation details
+// 3. Inheritance => Reusability of code => using extends keyword
+// 4. Polymorphism => Multiple forms
+        // overloading => same method name with different parameters
+// overriding => same method name with same parameters
+        
+class Bike extends Vehicle{
+    add() {
+        console.log("sample");
+    }
+} 
 
+const bike = new Bike("Sample Bike")
 
+// bike.display()
+
+// bike.add()
+
+class Calculator { // parent class
+    calc(a, b) {
+        return a + b
+    }
+}
+
+class Sub extends Calculator{ // Sub => child class
+    //@override
+    calc(a, b) {
+        return a - b
+    }
+
+    parentCalc(a, b) {
+        return super.calc(a, b)
+    }
+}
+
+const sub = new Sub()
+
+console.log(sub.calc(20, 1));
+console.log(sub.parentCalc(20, 1));
