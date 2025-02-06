@@ -69,3 +69,54 @@ const sub = new Sub()
 
 console.log(sub.calc(20, 1));
 console.log(sub.parentCalc(20, 1));
+
+// calculator => add, sub, mul, div
+
+// Book Information System
+
+class Book{
+
+    #title; 
+    #author;
+    #price;
+    #books;
+
+    constructor() {
+        this.#books = []
+    }
+
+    add(title, author, price) {
+        this.#title = title
+        this.#author = author
+        this.#price = price
+        const bookObj = {
+            title: this.#title,
+            author: this.#author,
+            price: this.#price
+        }
+        this.#books.push(bookObj)
+        return bookObj
+    }
+
+    delete(index) {
+        const deleted = this.#books[index]
+        this.#books.splice(index, 1)
+        return deleted
+    }
+
+    list() {
+        return this.#books
+    }
+
+}
+
+const bk = new Book()
+
+bk.add("sample", "alex", 100)
+bk.add("sample2", "alex2", 200)
+bk.add("sample3", "alex3", 300)
+
+console.log(bk.delete(1));
+
+console.log(bk.list());
+
