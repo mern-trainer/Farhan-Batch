@@ -1,0 +1,9 @@
+Complete using HTML, CSS, JAVASCRIPT
+
+1. Createa a web app for news application using promise and async/await.
+
+    You can use the api: https://ok.surf/api/v1/cors/news-feed
+
+2. Create a todo list app using promise and async/await.
+
+    You can use the api: https://jsonplaceholder.typicode.com/todos
