@@ -7,3 +7,7 @@ Complete using HTML, CSS, JAVASCRIPT
 2. Create a todo list app using promise and async/await.
 
     You can use the api: https://jsonplaceholder.typicode.com/todos
+
+3. Create a user list 
+
+    You can use the api: https://api.escuelajs.co/api/v1/users
