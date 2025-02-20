@@ -1,0 +1,6 @@
+1. Counting from 1 to n (n is a user input)
+2. Sum of N numbers
+3. Armstrong numbers
+4. Prime numbers
+5. Palindrome
+6. Factorial of N numbers
