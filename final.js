@@ -2,14 +2,14 @@
 
 // Recursion => A function that calls itself
 
-const counter = (n) => {
+const counter1 = (n) => {
     if (n == 0) {
         return "Final call"
     }
-    return counter(--n)
+    return counter1(--n)
 }
 
-console.log(counter(3));
+console.log(counter1(3));
 
 // counter(3) => return "Final call"
 // counter(2) => return "Final call"
@@ -56,3 +56,60 @@ const checkPalindrome = (number, temp=number, reversed=0) => {
 // checkPalindrome(121, 0, 121) => true
 
 console.log(checkPalindrome(121));
+
+// closure => a function that have access to the parent scope even after the parent function is executed
+
+const display = () => { // parent / outer
+    let value = 10
+    const multiply = () => { // child / inner
+        value *= 2
+        return value
+    }
+    const subtract = () => { // child / inner
+        value -= 5
+        return value
+    }
+    return {multiply, subtract}
+}
+
+const res = display()
+
+console.log(res.multiply());
+console.log(res.multiply());
+console.log(res.multiply());
+console.log(res.multiply());
+console.log(res.subtract());
+console.log(res.subtract());
+console.log(res.subtract());
+console.log(res.subtract());
+
+const counter = () => {
+    let data = 0
+    const increment = () => {
+        data++
+        return data
+        // return ++data
+    }
+    const reset = () => {
+        data = 0
+        return data
+    }
+    const decrement = () => {
+        data--
+        return data
+        // return --data
+    }
+    return {increment, reset, decrement}
+}
+
+const func = counter()
+
+console.log(func.increment());
+console.log(func.increment());
+console.log(func.increment());
+console.log(func.increment());
+console.log(func.reset());
+console.log(func.decrement());
+console.log(func.decrement());
+console.log(func.decrement());
+console.log(func.decrement());
