@@ -1,4 +1,4 @@
-// Recursion, Closure, Curring
+// Recursion, Closure
 
 // Recursion => A function that calls itself
 
@@ -57,7 +57,8 @@ const checkPalindrome = (number, temp=number, reversed=0) => {
 
 console.log(checkPalindrome(121));
 
-// closure => a function that have access to the parent scope even after the parent function is executed
+// closure => a function that have access to the parent scope even after the 
+// parent function is executed
 
 const display = () => { // parent / outer
     let value = 10
@@ -113,3 +114,46 @@ console.log(func.decrement());
 console.log(func.decrement());
 console.log(func.decrement());
 console.log(func.decrement());
+
+// curring, hoisting
+
+// curring => a function that takes multiple arguments and returns a
+// function that takes a single argument
+const volume = (length, width, height) => {
+    return length * width * height
+} // curring
+
+const curriedVolume = (length) => {
+    console.log("Received length:", length)
+    return (width) => {
+        const area = length * width
+        console.log("Received width:", width)
+        return (height) => {
+            const volume = area * height
+            console.log("Received height:", height)
+            return volume
+        }
+    }
+}
+
+// const res2 = volume(10, 20, 30)
+// console.log(res2);
+
+const res2 = curriedVolume(10)
+const res3 = res2(50)
+
+const res4 = res3(100)
+
+console.log(res4);
+
+// hoisting => declaring a variable or function after using it
+
+// console.log(a); // hoisting
+
+// var a; // declaration, not initialization
+
+hello()
+
+function hello() {
+    console.log("Function called");
+}
