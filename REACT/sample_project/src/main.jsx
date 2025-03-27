@@ -5,6 +5,4 @@ const element = document.getElementById("root")
 
 const root = createRoot(element)
 
-// pascal case -> FirstNameOfUser
-
 root.render(<App />)
