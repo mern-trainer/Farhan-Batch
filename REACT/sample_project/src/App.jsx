@@ -6,6 +6,7 @@
 // snake_case -> first_name
 
 // inline, external, framework
+import "./main.css"
 
 const styles = {
     container: { color: "red", backgroundColor: "black", padding: "20px" },
@@ -27,8 +28,8 @@ export const App = () => {
         <div style={styles.container}>
             Hello
         </div>
-        <div>
-            Hey
+        <div className="heading">
+            Hey skldflsdf
         </div>
         <h1 style={styles.heading}>{a}</h1>
         <button style={styles.click} onClick={() => {
