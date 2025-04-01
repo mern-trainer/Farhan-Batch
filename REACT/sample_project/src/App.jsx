@@ -1,11 +1,3 @@
-
-// Fragment -> used to wrap multiple elements
-
-// camelCase -> firstName
-// PascalCase -> FirstName
-// snake_case -> first_name
-
-// inline, external, framework
 import Header from "./components/Header"
 import Hero from "./components/Hero"
 import "./main.css"
@@ -39,7 +31,7 @@ export const App = () => {
     //     }}>Click Here</button>
     // </Fragment>
     return <Fragment>
-        <Header />
+        {/* <Header /> */}
         <Hero />
     </Fragment>
 }
