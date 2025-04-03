@@ -1,8 +1,10 @@
 import { Container, Image, Nav, Navbar, NavDropdown } from "react-bootstrap"
 
+
 const Header = () => {
     return <Navbar expand="md" bg="light" className="navbar-light" >
         <Container fluid>
+            <p></p>
             <Navbar.Brand href="#home">
                 <Image height="60px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNit-5k7lXLMpGsJt2iDIeB9PSNqxo0E9a9w&s"/>
             </Navbar.Brand>
@@ -13,7 +15,8 @@ const Header = () => {
                     <Nav.Link href="#link">Link</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
-            
+            <div>Make </div>
+            <p>Product </p>
         </Container>
     </Navbar>
 }

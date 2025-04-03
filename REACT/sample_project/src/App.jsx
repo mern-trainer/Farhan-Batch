@@ -1,37 +1,21 @@
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-import "./main.css"
+// state -> An object that stores the current state of the component
+// Hooks -> Function that let you use state and other React features without writing a class
+// functional components and class components
 
-const styles = {
-    container: { color: "red", backgroundColor: "black", padding: "20px" },
-    heading: { color: "green", fontSize: "50px" },
-    click: {backgroundColor: "blue", color: "white", padding: "10px", borderRadius: "10px"}
-}
+import { useState } from "react";
 
-import { Fragment } from "react"
+const App = () => {
+    
+    const [counter, setCounter] = useState(10) // counter
 
-export const App = () => {
-
-    const a = "Hello World!" 
-
-    const handleClick = (temp) => {
-        console.log("Button Clicked");
+    const handleUpdate = () => {
+        setCounter(counter + 1)
     }
-
-    // return <Fragment>
-    //     <div style={styles.container}>
-    //         Hello
-    //     </div>
-    //     <div className="heading">
-    //         Hey skldflsdf
-    //     </div>
-    //     <h1 style={styles.heading}>{a}</h1>
-    //     <button style={styles.click} onClick={() => {
-    //         handleClick("hello")
-    //     }}>Click Here</button>
-    // </Fragment>
-    return <Fragment>
-        {/* <Header /> */}
-        <Hero />
-    </Fragment>
+    
+    return <div>
+        <div>{counter}</div>
+        <button onClick={handleUpdate}>Update Value</button>
+    </div>
 }
+
+export default App

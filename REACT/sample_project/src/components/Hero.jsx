@@ -36,6 +36,8 @@ const Hero = () => {
             </Card.Body>
         </Card> */}
 
+        <div></div>
+
         <Container fluid>
             <Row>
                 <Col xs="12" sm="6" md="4" xl="3" xxl="2" className="bg-danger">1</Col>
