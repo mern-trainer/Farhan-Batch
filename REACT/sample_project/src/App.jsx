@@ -9,7 +9,16 @@ const App = () => {
     const [counter, setCounter] = useState(10) // counter
 
     const handleUpdate = () => {
-        setCounter(counter + 1)
+        // setCounter(counter + 1)
+        // setCounter(counter + 1)
+        // setCounter(counter + 1)
+        // setCounter(counter + 1)
+        // setCounter(counter + 1)
+        setCounter(prevCounter => prevCounter + 1)
+        setCounter(prevCounter => prevCounter + 1)
+        setCounter(prevCounter => prevCounter + 1)
+        setCounter(prevCounter => prevCounter + 1)
+        setCounter(prevCounter => prevCounter + 1)
     }
     
     return <div>
