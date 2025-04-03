@@ -7,6 +7,7 @@ import { useState } from "react";
 const App = () => {
     
     const [password, setPassword] = useState("")
+    const [passwordHostory, setPasswordHistory] = useState([])
 
     const handleGeneratePassword = () => {
         const charecters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+"
@@ -20,11 +21,15 @@ const App = () => {
             i++
         }
         setPassword(pass)
+        setPasswordHistory(passwords => [pass, ...passwords])
     }
     
     return <div>
         <div>{password}</div>
         <button onClick={handleGeneratePassword}>Generate Random Password</button>
+        <div>
+            {passwordHostory.join(", ")}
+        </div>
     </div>
 }
 

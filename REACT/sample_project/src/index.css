@@ -2,8 +2,15 @@
 
 body{
     font-family: "Syne", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    text-align: center;
 }
+
+button{
+    padding: 10px; 
+    border-radius: 10px;
+    margin-block: 20px;
+    border: none;
+    background-color: #e0e0e0;
+    box-shadow: 4px 4px 4px rgba(6, 6, 6, 0.25), -4px -4px 4px rgba(198, 198, 198, 0.25);
+}
+
