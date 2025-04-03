@@ -6,24 +6,25 @@ import { useState } from "react";
 
 const App = () => {
     
-    const [counter, setCounter] = useState(10) // counter
+    const [password, setPassword] = useState("")
 
-    const handleUpdate = () => {
-        // setCounter(counter + 1)
-        // setCounter(counter + 1)
-        // setCounter(counter + 1)
-        // setCounter(counter + 1)
-        // setCounter(counter + 1)
-        setCounter(prevCounter => prevCounter + 1)
-        setCounter(prevCounter => prevCounter + 1)
-        setCounter(prevCounter => prevCounter + 1)
-        setCounter(prevCounter => prevCounter + 1)
-        setCounter(prevCounter => prevCounter + 1)
+    const handleGeneratePassword = () => {
+        const charecters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+"
+        let i = 0
+        const limit = 16
+        let pass = ""
+        while (i <= limit) {
+            const randomIndex = Math.floor(Math.random() * charecters.length)
+            const randomCharecter = charecters[randomIndex]
+            pass += randomCharecter
+            i++
+        }
+        setPassword(pass)
     }
     
     return <div>
-        <div>{counter}</div>
-        <button onClick={handleUpdate}>Update Value</button>
+        <div>{password}</div>
+        <button onClick={handleGeneratePassword}>Generate Random Password</button>
     </div>
 }
 
