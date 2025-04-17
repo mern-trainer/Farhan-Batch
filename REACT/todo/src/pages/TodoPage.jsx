@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { FaCheckCircle, FaTrash } from "react-icons/fa"
 import { toast } from "react-toastify"
+import Header from "../components/Header"
 
 // todo -> task list
 // array map
@@ -61,7 +62,8 @@ const TodoPage = () => {
     }
 
     return <div className="px-2 d-flex flex-column align-items-center justify-content-center">
-        <form onSubmit={handleSubmit} className="w-100 d-flex mt-2" style={{maxWidth: "500px"}}>
+        <Header brand={<img style={{width: "40px"}} src="https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="logo"/>} />
+        <form onSubmit={handleSubmit} className="w-100 d-flex mt-2" style={{ maxWidth: "500px" }}>
             <input type="text" value={todo} onChange={handleChange} placeholder="Enter Task to be done." name="todo" className="w-100 border border-2 p-2 border-secondary border-end-0" style={{outline: "none"}}/>
             <button className="btn btn-secondary text-nowrap rounded-0">Add Task</button>
         </form>
