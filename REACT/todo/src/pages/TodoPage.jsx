@@ -2,6 +2,7 @@ import { useState } from "react"
 import { FaCheckCircle, FaTrash } from "react-icons/fa"
 import { toast } from "react-toastify"
 import Header from "../components/Header"
+import { Link } from "react-router"
 
 // todo -> task list
 // array map
@@ -85,6 +86,7 @@ const TodoPage = () => {
                 })
             }
         </div>
+        <Link to="/page-a" className="btn btn-primary mt-3">Go to Page A</Link>
     </div>
 }
 
