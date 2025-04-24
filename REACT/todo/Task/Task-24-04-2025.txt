@@ -1,0 +1,6 @@
+1. Create a signup form that only accepts valid email addresses. (single field)
+2. Store the email address in a state
+3. if the user is signed up, the display login form that only accepts valid email addresses. (single field)
+4. if the user is logged in, display the email address
+5. add a button that logs the user out.
+6. Manage all the states in a single component
