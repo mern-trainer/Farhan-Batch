@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 import { useNavigate, useParams } from "react-router"
 
 const Dynamic = () => {
@@ -15,10 +16,47 @@ const Dynamic = () => {
         }
     }
 
-    return <div>
-        <h1>Dynamic Id: {id || "No Id"}</h1>
-        <button onClick={handleNavigation}>Navigate to dynamic 2</button>
-    </div>
+    // if (id == 1) { // conditional rendering
+    //     return <div>
+    //         <h1>Dynamic 1</h1>
+    //     </div>
+    // }
+
+    // if (id == 2) {
+    //     return <div>
+    //         <h1>Dynamic 2</h1>
+    //     </div>
+    // }
+
+
+    return <Fragment>
+        {/* {
+            id == 1 && <div>
+                <h1>Dynamic 1</h1>
+            </div>
+        }
+        {
+            id == 2 && <div>
+                <h1>Dynamic 2</h1>
+            </div>
+        }
+        {
+            id != 1 && id != 2 && <div>
+                <h1>Dynamic 3</h1>
+                <button onClick={handleNavigation}>Go to Dynamic 2</button>
+            </div>
+        } */}
+        {
+            id == 1 ? <div>
+                <h1>Dynamic 1</h1>
+            </div> : id == 2 ? <div>
+                <h1>Dynamic 2</h1>
+            </div> : <div>
+                <h1>Dynamic 3</h1>
+                <button onClick={handleNavigation}>Go to Dynamic 2</button>
+            </div>
+        }
+    </Fragment>
 }
 
 export default Dynamic
