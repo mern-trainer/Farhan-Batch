@@ -1,10 +1,10 @@
-import { Fragment, useContext } from "react"
+import { Fragment } from "react"
 import { useNavigate, useParams } from "react-router"
-import { SampleContext } from "../App"
+import { useSampleContext } from "../context/SampleContext"
 
 const Dynamic = () => {
 
-    const { counter } = useContext(SampleContext)
+    const { counter } = useSampleContext()
 
     const { id } = useParams()
     const is_authenticated = true

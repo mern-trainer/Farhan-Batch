@@ -1,10 +1,9 @@
-import { useContext } from "react"
-import { SampleContext } from "../App"
 import { Link } from "react-router"
+import { useSampleContext } from "../context/SampleContext"
 
 const Dynamic2 = () => {
 
-    const { counter, setCounter } = useContext(SampleContext)
+    const { counter, setCounter } = useSampleContext()
 
     return <div>
         <h1>Dynamic 2</h1>

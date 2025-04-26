@@ -3,17 +3,12 @@ import PageA from "./pages/PageA"
 import TodoPage from "./pages/TodoPage"
 import Dynamic from "./pages/Dynamic"
 import Dynamic2 from "./pages/Dymanic2"
-import { createContext, useState } from "react"
+import { SampleContextProvider } from "./context/SampleContext"
 
-// createContext
-
-export const SampleContext = createContext()
 
 const App = () => {
 
-    const [counter, setCounter] = useState(0)
-
-    return <SampleContext.Provider value={{ counter, setCounter }}>
+    return <SampleContextProvider>
         <BrowserRouter>
             <Routes>
                 <Route path="/todo" Component={TodoPage} />
@@ -22,7 +17,7 @@ const App = () => {
                 <Route path="/dynamic2" Component={Dynamic2} />
             </Routes>
         </BrowserRouter>
-    </SampleContext.Provider>
+    </SampleContextProvider>
 }
 
 export default App
