@@ -4,6 +4,8 @@ import Modal from "../components/Modal"
 import { Link } from "react-router"
 
 // property - (props) -> Pass data from parent component to child component.
+// context api -> state, props, context api
+// global state management
 
 const PageA = () => { // parant
 

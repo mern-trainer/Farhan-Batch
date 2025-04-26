@@ -1,7 +1,10 @@
-import { Fragment } from "react"
+import { Fragment, useContext } from "react"
 import { useNavigate, useParams } from "react-router"
+import { SampleContext } from "../App"
 
 const Dynamic = () => {
+
+    const { counter } = useContext(SampleContext)
 
     const { id } = useParams()
     const is_authenticated = true
@@ -56,6 +59,7 @@ const Dynamic = () => {
                 <button onClick={handleNavigation}>Go to Dynamic 2</button>
             </div>
         }
+        <div>Value from context: {counter}</div>
     </Fragment>
 }
 
