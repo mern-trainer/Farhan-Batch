@@ -1,0 +1,25 @@
+Task: Build a Product Catalog Application
+
+Requirements:
+
+1. Product Listing Page
+   - Create a page with a header section
+   - Include a search functionality - Only UI
+   - Display a grid/list of products
+   - Fetch product data from: https://dummyjson.com/products
+   - Each product should be clickable
+
+2. Product Details Page
+   - Create a dedicated page to show detailed product information
+   - Fetch single product details from: https://dummyjson.com/products/<id_field_value_from_products>
+   - Display comprehensive product information
+   - Implement navigation between listing and details pages
+
+Technical Requirements:
+- Use React Router for navigation
+- Implement useNavigate() hook for programmatic navigation
+- Use useParams() hook to capture product ID from URL
+- Ensure responsive design
+
+Expected Behavior:
+- Clicking a product in the listing page should navigate to its details page
