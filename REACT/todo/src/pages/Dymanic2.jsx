@@ -12,6 +12,7 @@ const Dynamic2 = () => {
 
     const { counter, setCounter } = useSampleContext()
     const [timer, setTimer] = useState(0)
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -22,12 +23,37 @@ const Dynamic2 = () => {
         }
     }, [counter])
 
+    const getProducts = async () => {
+        try{ 
+            const response = await fetch('https://dummyjson.com/products')
+            const data = await response.json()
+            setProducts(data.products)
+        } catch (error){
+            return console.log(error);
+        }
+    }
+
+    useEffect(() => {
+        getProducts()
+    }, [])
+
     return <div>
-        <h1>Dynamic 2</h1>
+        {/* <h1>Dynamic 2</h1>
         <h1>{timer}</h1>
         <h1>{counter}</h1>
         <button onClick={() => setCounter(counter + 1)}>Update</button>
-        <Link to={"/dynamic"} className="btn btn-primary mt-3">Go to Dynamic Page</Link>
+        <Link to={"/dynamic"} className="btn btn-primary mt-3">Go to Dynamic Page</Link> */}
+        <div>
+            {
+                products.map((product) => {
+                    return <div key={product.id}> 
+                        <img src={product.thumbnail} alt={product.title} />
+                        <h1>{product.title}</h1>
+                        <p>{product.description}</p>
+                    </div>
+                })
+            }
+        </div>
     </div>
 }
 
