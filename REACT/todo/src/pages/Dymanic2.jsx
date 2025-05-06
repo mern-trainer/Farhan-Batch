@@ -1,4 +1,3 @@
-import { Link } from "react-router"
 import { useSampleContext } from "../context/SampleContext"
 import { useEffect, useState } from "react"
 import { FaDollarSign, FaShoppingCart, FaStar } from "react-icons/fa"
