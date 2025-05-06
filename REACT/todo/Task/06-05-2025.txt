@@ -1,0 +1,9 @@
+1. Create a Todo List Application with Redux:
+
+- Set up Redux store and reducers
+- Create actions for adding, removing, and toggling todos
+- Implement todo list components (TodoList, TodoItem)
+- Add form for creating new todos
+- Connect components to Redux store using useSelector/useDispatch
+- Style the todo list interface
+- Implement error handling
