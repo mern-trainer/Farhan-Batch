@@ -2,6 +2,7 @@
 
 import { useDispatch, useSelector } from "react-redux"
 import { decrement, increment } from "../Redux/counter.slice"
+import { changeGeneratedPassword } from "../Redux/password.slice"
 
 // state, context api
 
@@ -28,13 +29,23 @@ import { decrement, increment } from "../Redux/counter.slice"
 const Redux = () => {
 
     const { value } = useSelector(state => state.counter)
+    const { generatedPassword, history } = useSelector(state => state.password)
     const dispatch = useDispatch()
 
     return <div className="d-flex flex-column align-items-center mt-3">
         <h1>{value}</h1>
         <div className="d-flex gap-2">
-            <button className="btn btn-success" onClick={() => dispatch(increment(10))}>Increment</button>
-            <button className="btn btn-danger" onClick={() => dispatch(decrement(5))}>Decrement</button>
+            <button className="btn btn-success" onClick={() => dispatch(increment({number: 5}))}>Increment</button>
+            <button className="btn btn-danger" onClick={() => dispatch(decrement({number: 2}))}>Decrement</button>
+        </div>
+        {generatedPassword}
+        <button onClick={() => dispatch(changeGeneratedPassword({ password: crypto.randomUUID() }))}>Generate Password</button>
+        <div>
+            {
+                history.map(pass => {
+                    return <div key={pass}>{pass}</div>
+                })
+            }
         </div>
     </div>
 }
